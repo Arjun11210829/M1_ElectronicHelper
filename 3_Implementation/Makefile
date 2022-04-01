@@ -1,5 +1,5 @@
 # Name of the project
-PROJECT_NAME = Calculator
+PROJECT_NAME = ElectronicHelper
 
 # Output directory
 BUILD = build
@@ -75,3 +75,8 @@ clean:
 # Create new build folder if not present
 $(BUILD):
 	mkdir build
+
+BUILD:
+	gcc test_electronichelper.c testfunctions.c -lm ../unity/unity.c -I../unity
+
+
