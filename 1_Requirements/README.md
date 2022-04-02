@@ -1,18 +1,17 @@
 # Requirements
 
-## INTRODUCTION: 
+## INTRODUCTION
 Electronic Helper is designed for calculating electrical parameters such as voltage, current, resistance, power, and to find resistance with color of the resistor. People don't have to remember complex formulas having this system. The tool used for writing the code in this project is visual studio code. This project has multi file and multiplatform approach (Linux and Windows).
-### Defining System:
+### Defining System
 * Design and testing operations of electric helper using unit testing algorithm.
 ### SWOT analysis
-#### Strengths: 
-* user-friendly, innovative
-#### Weakness:
-* complexity of the code will increase as features are added
-#### Opportunities:
-* people can just enter parameters to get the answer, rather than calculating with pen and paper.
-#### Threats:
-* Slower growth in innovation ia always a threat for the world.
+**Strengths:** User-friendly, innovative.
+
+**Weakness:** Complexity of the code will increase as features are added.
+
+**Opportunities:** People can just enter parameters to get the answer, rather than calculating with pen and paper.
+
+**Threats:** Slower growth in innovation ia always a threat for the world.
 ### 4’W and 1’H
 **What:** Electronic Helper.
 
