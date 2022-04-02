@@ -28,11 +28,3 @@ Electronic Helper is designed for calculating electrical parameters such as volt
 | L03 | calculates the resistance | Implemented |
 | L04 | calculates the power | Implemented |
 | L05 | calculates the resistance by color | Implemented |
-
-
-
-
-
-
-
-
