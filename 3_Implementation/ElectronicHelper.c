@@ -3,7 +3,7 @@
 #include <string.h>
 #include "ElectronicHelper.h"
 
-/*all functions for calculating voltage, power, current, resistance with the other two values and also to find resistance with color*/
+/* functions starts from here */
 
 float vol_ir(float i, float r)
 {
@@ -402,13 +402,14 @@ if(B.initial_option == 5)
         
         printf("Enter the number of colors on resistor:");
         scanf("%d",&B.num_colors);
-        char value[100];
-        char appendval[100];
+        char value[100]={'\0'};
+        char appendval[100]={'\0'};
+        
         for(int i=0; i<B.num_colors ;i++)
         {
-            char color[200];
+            char color[100]={'\0'};
             printf("Enter the %d colour:",i+1);
-            scanf("%s",color);
+            scanf("%50s",color);
 
             resistor_color(color,value,i,B.num_colors);
             strcat(appendval,value);
