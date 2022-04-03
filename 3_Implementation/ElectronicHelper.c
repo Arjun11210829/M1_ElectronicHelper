@@ -4,6 +4,7 @@
 #include "ElectronicHelper.h"
 
 /* functions starts from here */
+extern int unity_test();
 
 float vol_ir(float i, float r)
 {
@@ -243,6 +244,7 @@ void resistor_color(char *res_clr,char *clr_val,int iter,int numclr)
 
 void main()
 {
+    unity_test();
     printf("..........................................................................\n");
     printf("                         Electronic Helper                            \n");
     printf("1.press 1 to find resistance of a resistor by naming the colors on them\n");

@@ -2,18 +2,18 @@
 #include <stdio.h>
 #include <string.h>
 
-extern float vol_irt(float i, float r);
-extern float vol_pit(float p, float i);
-extern float vol_prt(float p, float r);
-extern float cur_vrt(float v, float r);
-extern float cur_pvt(float v, float p);
-extern float cur_prt(float p, float r);
-extern float res_vit(float i, float v);
-extern float res_pvt(float p, float v);
-extern float res_pit(float i, float p);
-extern float pow_vit(float v, float i);
-extern float pow_vrt(float v, float r);
-extern float pow_irt(float i, float r);
+extern float vol_ir(float i, float r);
+extern float vol_pi(float p, float i);
+extern float vol_pr(float p, float r);
+extern float cur_vr(float v, float r);
+extern float cur_pv(float v, float p);
+extern float cur_pr(float p, float r);
+extern float res_vi(float i, float v);
+extern float res_pv(float p, float v);
+extern float res_pi(float i, float p);
+extern float pow_vi(float v, float i);
+extern float pow_vr(float v, float r);
+extern float pow_ir(float i, float r);
 void resistor_color1t();
 /* Prototypes for all the test functions */
 void test_vol_ir();
@@ -39,7 +39,7 @@ void tearDown()
 
 /* Start of the application test */
 
-int main(void)
+int unity_test(void)
 {
     UnityBegin(NULL);/* Initiate the Unity Test Framework */
 
@@ -67,44 +67,44 @@ int main(void)
 /* Write all the test functions */ 
 void test_vol_ir() 
 {
-  TEST_ASSERT_EQUAL_FLOAT(72,vol_irt(3.6,20));
+  TEST_ASSERT_EQUAL_FLOAT(72,vol_ir(3.6,20));
 }
 
 void test_vol_pi()
 {
-  TEST_ASSERT_EQUAL(47.61,vol_pit(200,4.2));
+  TEST_ASSERT_EQUAL(47.61,vol_pi(200,4.2));
 }
 
 void test_vol_pr()
 {
-TEST_ASSERT_EQUAL_FLOAT(63.24555,vol_prt(200,20));
+TEST_ASSERT_EQUAL_FLOAT(63.24555,vol_pr(200,20));
 }
 void test_cur_vr(){
-TEST_ASSERT_EQUAL_FLOAT(0.48,cur_vrt(12,25));
+TEST_ASSERT_EQUAL_FLOAT(0.48,cur_vr(12,25));
 }
 void test_cur_pv(){
-TEST_ASSERT_EQUAL_FLOAT(12.5,cur_pvt(24,300));
+TEST_ASSERT_EQUAL_FLOAT(12.5,cur_pv(24,300));
 }
 void test_cur_pr(){
-TEST_ASSERT_EQUAL_FLOAT(0.5,cur_prt(500,2000));
+TEST_ASSERT_EQUAL_FLOAT(0.5,cur_pr(500,2000));
 }
 void test_res_vi(){
-TEST_ASSERT_EQUAL_FLOAT(3.157895,res_vit(3.8, 12));
+TEST_ASSERT_EQUAL_FLOAT(3.157895,res_vi(3.8, 12));
 }
 void test_res_pv(){
-TEST_ASSERT_EQUAL_FLOAT(0.48,res_pvt(1200, 24));
+TEST_ASSERT_EQUAL_FLOAT(0.48,res_pv(1200, 24));
 }
 void test_res_pi(){
-TEST_ASSERT_EQUAL_FLOAT(7.324218,res_pit(12.8, 1200));
+TEST_ASSERT_EQUAL_FLOAT(7.324218,res_pi(12.8, 1200));
 }
 void test_pow_vi(){
-TEST_ASSERT_EQUAL_FLOAT(1392, pow_vit(240, 5.8));
+TEST_ASSERT_EQUAL_FLOAT(1392, pow_vi(240, 5.8));
 }
 void test_pow_vr(){
-TEST_ASSERT_EQUAL_FLOAT(115.2,pow_vrt(240, 500));
+TEST_ASSERT_EQUAL_FLOAT(115.2,pow_vr(240, 500));
 }
 void test_pow_ir(){
-TEST_ASSERT_EQUAL_FLOAT(89780, pow_irt(6.7, 2000));
+TEST_ASSERT_EQUAL_FLOAT(89780, pow_ir(6.7, 2000));
 }
 
 void resistor_color1t()

@@ -2,7 +2,7 @@
 PROJECT_NAME = ElectronicHelper
 
 BUILD:
-	gcc ElectronicHelper.c -lm inc/ElectronicHelper.h -Iinc -o ElectronicHelper.out
+	gcc ElectronicHelper.c test/test_electronichelper.c inc/ElectronicHelper.h -lm unity/unity.c -Iunity -Itest -Iinc -o ElectronicHelper.out
 
 RUN:
 	./ElectronicHelper.out
